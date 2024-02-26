@@ -1,0 +1,465 @@
+/*
+@ 384 off sides of window
+@ on top and bottom edge
+@ width static to avoid skewing
+between pages
+*/
+body
+{
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 1000px)
+{
+    #wrapper
+    {
+        padding: 0;
+    }
+    #content
+    {
+        width: 100%;
+    }
+    #nav ul
+    {
+        list-style-type: none;
+        overflow: hidden;  
+        margin: 0;
+        padding: 0;
+    } 
+    #topnav 
+    {
+        padding: 1% 0 1% 0;
+        width: 100%;
+    }
+    #topnav p
+    {
+        margin: 1% 0 1% 0;
+    }
+    p.small_info
+    {
+        font-size: 70%;
+    }
+    p.item_name
+    {
+        font-size: 80%;
+    }
+}
+@media only screen and (max-width: 400)
+{
+    div.item_container
+    {
+        display: block;
+        margin: 1%;
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 500)
+{
+    #nav a,li,ul
+    {
+        font-size: 2em;
+    }
+    div.item_container
+    {
+        min-width: 200px;
+        width: 50%;
+    }
+    #topnav
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+/* START OF NAV STYLES **********************************/
+#topnav
+{
+    width: 40%;
+    height: 25px;
+    padding: 1% 0 1% 60%;
+    background-color: #a81717;
+}
+#topnav p 
+{
+    display: inline;
+    margin: 1% 5% 1% 0;
+    vertical-align: middle;
+}
+#topnav img 
+{
+    vertical-align: middle;
+}
+#top_buttons
+{
+    margin: 0;
+    width: 76%;
+    height: 100%;
+    /*background-color: #d9d9d9;*/
+    /*background-image: url("images/fbla-national_stage.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;*/
+    padding: 6% 12% 0 12%;
+}
+#top_buttons img 
+{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+#top_buttons .img_block_60
+{
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+#top_buttons .img_block_100
+{
+    width: 100%;
+}
+.titletop
+{
+ /*   background-image: url("Images/titlebackgroundnb.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;*/
+    width: 100%;
+    height: 50%;
+}
+.shoppingcart
+{
+    float: right;
+}
+#nav
+{
+    /*height: 200px;*/
+    margin-top: 6%;
+    /*padding: 0 12% 0 12%;*/
+    font-size: 140%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#nav ul
+{
+    list-style-type: none;
+    overflow: hidden;  
+    margin: 0;
+    padding: 0 12% 0 12%;
+    
+}
+#nav li
+{
+    float: left;
+    display: inline;
+    width: 19%;
+    padding: .5%;
+    text-align: center;
+    /*border-left: solid;
+    border-width: 1px;
+    border-color: #b3b3b3;*/
+    border-bottom: #a81717 solid 5px;
+}
+#nav li:active
+{
+    background-color: #999999;
+    border-color: #000000;
+}
+#nav a
+{
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+/*#nav a:hover
+{
+    color: black;   
+}*/
+#nav li:hover
+{
+    background-color: #a81717;
+}
+#nav .current
+{
+    background-color: #a81717;
+}
+/* contains content between footer and nav
+    rounded shadow border*/
+#wrapper
+{
+    /*margin-left: 15%;
+    margin-right: 15%; */
+    /*border-style: none; */
+    padding: 0 12% 0 12%;
+    color: black;
+    min-height: 500px;
+    background-color: #f2f2f2;
+}
+/* START OF CONTENT STYLES ********************************************/
+/* Contains most of info on the page
+    1% off sides of wrapper
+*/
+#content
+{
+    display: block;
+    height: 100%;
+    min-height: 300px;
+    font-family: "Arial", Arial, sans-serif;
+}
+.home_divs, tr
+{
+    width: 100%;
+    min-height: 300px;
+}
+td
+{
+    width: 18%;
+    padding: 1% 0.5% 1% 0.5%;
+    vertical-align: top;
+    text-align: left;
+}
+td .img_show
+{
+    width: 100%;
+    height: 30%;
+}
+td .img_large
+{
+    width: 80%;
+}
+td li
+{
+    margin: 20px;
+    height: 30px;
+}
+td h2
+{
+    margin-top: 0;
+}
+.ul_wig
+{
+    list-style-type: none;
+    padding: 0;
+}
+.ul_wig img
+{
+    vertical-align: middle;
+}
+/* this is the container for items in the shop */
+div.item_container
+{
+    display: inline-block;
+    margin: 1%;
+    width: 22%;
+    height: 25%;
+    overflow: hidden;
+    min-height: 140px;
+}
+div.item_container p
+{
+    padding-left: 3%;
+}
+input.quantity
+{
+    width: 12%;
+    float: left;
+    height: 4%;
+    margin: 0 0 0 5%;
+    font-size: 80%;
+}
+p.quantity_text
+{
+    font-size: 80%;
+    margin: 0;
+    width: auto;
+    float: left;
+}
+img.item_show
+{
+    margin: 0;
+    width: 100%;
+    /*min-width: 240px;*/
+    height: 70%;
+    z-index: -1;
+    display: block;
+}
+img.zoom_button
+{
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+    margin: 78% 0 0 80%;
+}
+img.abt_icon
+{
+    display: inline;
+}
+p.item_name
+{
+    margin: 3% 0 0 0;
+    width: 75%;
+}
+p.small_info
+{
+    margin: 1% 0 1% 0;
+    font-size: 80%;
+}
+p.price
+{
+    font-weight: bold;
+    margin: 0;
+}
+#contact_info p
+{
+    display: inline;
+    width: 50%;
+    padding-left: 2%;
+}
+#contact_info h2 
+{
+    display: inline;
+}
+img.AddToCart
+{
+    float: right;
+    margin: 1%;
+}
+/* end of content styles *****************************************************/
+/* START OF FOOTER STYLES **********************/
+#footer
+{
+    padding: 0 12% 0 12%;
+    text-align: center;
+    color: #666666;
+    bottom: 0;
+    position: relative;
+    background-color: #a81717;
+    height: 100px;
+    /*border-bottom: solid #f5bc00 10px;*/
+}
+#footer p
+{
+    color: white;
+    /* stick to bottom */
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    float: left;
+}
+/* links maintain text color */
+#footer a
+{
+    color: #666666;
+}
+#footer img
+{
+    float: right;
+    margin: 2% 1% 1% 1%;
+}
+/* end of footer styles *********************************************/
+.center
+{
+    text-align: center;
+}
+p
+{
+    font-size: 1em;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a:hover
+{
+    text-decoration: underline;
+    color: black;
+}
+/* the first text that comes up as summary of page */
+p.summary
+{
+    margin: 0 0 2% 0;
+    display: block;
+}
+p.bold
+{
+    font-weight: bold;
+}
+
+hr
+{
+    margin: 2% 0 2% 0;
+    width: 100%;
+    color: black;
+}
+h2.pagetitle
+{
+    margin-top: 0;
+    margin-bottom: 1%;  
+    font-size: 3em;
+    display: inline;
+}
+/* title of site, will change to image */
+.underline
+{
+    text-decoration: underline;
+}
+
+
+/*
+
+@media only screen and (max-width: 1235px)
+{
+    #wrapper
+    {
+        margin: 8% 10% 0 10%;
+        padding: 0 0 3% 0; 
+    }
+    #top_buttons h2
+    {
+        font-size: 6em;
+    }
+    #top_buttons p 
+    {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 999px)
+{
+    #wrapper
+    {
+        margin: 8% 5% 0 5%;
+        padding: 0 0 3% 0; 
+    }
+    
+    div.item_container
+    {
+        width: 17%;
+        height: 20%;
+    }
+    img.item_show
+    {
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    #nav
+    {
+        font-size: 200%;
+    } 
+    div.item_container
+    {
+        width: 20%;
+        height: 15%;
+    }
+    img.item_show
+    {
+        height: 60%;
+    }
+}
+*/
